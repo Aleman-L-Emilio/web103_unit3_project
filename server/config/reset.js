@@ -1,4 +1,5 @@
 import { pool } from './database.js';
+import 'dotenv/config';
 
 const createLocationsTable = async () => {
   const createTableQuery = `
@@ -40,13 +41,13 @@ const createEventsTable = async () => {
 
 const seedData = async () => {
     try {
-        // Seed Locations
+        // Seed Locations with NEW image URLs
         await pool.query(`
         INSERT INTO locations (name, description, image_url) VALUES
-        ('Cosmic Cantina', 'A retro-futuristic diner known for its alien clientele and synth-wave music nights.', 'https://i.imgur.com/gYf7s5A.png'),
-        ('The Forbidden Library', 'An ancient repository of forgotten lore and powerful artifacts. Enter at your own risk.', 'https://i.imgur.com/OQXnC3R.png'),
-        ('Dragon''s Peak', 'The highest mountain in the realm, home to ancient dragons and breathtaking views.', 'https://i.imgur.com/9wO4i2k.png'),
-        ('Neon Alley', 'A bustling cyberpunk market street, famous for its tech vendors and noodle stalls.', 'https://i.imgur.com/rB1jA3E.png');
+        ('Cosmic Cantina', 'A retro-futuristic diner known for its alien clientele and synth-wave music nights.', '/assets/cosmic_cantina.jpeg'),
+        ('The Forbidden Library', 'An ancient repository of forgotten lore and powerful artifacts. Enter at your own risk.', '/assets/forbidden_library.jpeg'),
+        ('Dragon''s Peak', 'The highest mountain in the realm, home to ancient dragons and breathtaking views.', '/assets/dragons_peak.jpeg'),
+        ('Neon Alley', 'A bustling cyberpunk market street, famous for its tech vendors and noodle stalls.', '/assets/neon_alley.jpeg');
         `);
 
         // Seed Events
