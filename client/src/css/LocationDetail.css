@@ -37,3 +37,40 @@
 .location-events main i {
     margin-right: 10px;
 }
+
+.location-detail-container {
+    padding: 2rem;
+    max-width: 900px;
+    margin: auto;
+    color: white;
+}
+
+.events-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.event-item {
+    padding: 1.5rem;
+    border: 1px solid var(--main-color);
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.event-item h3 {
+    margin-top: 0;
+    color: var(--main-color);
+}
+
+.past-event {
+    background-color: rgba(50, 50, 50, 0.6);
+    border-color: #555;
+    opacity: 0.7;
+}
+
+.past-event h3 {
+    text-decoration: line-through;
+    color: #999;
+}

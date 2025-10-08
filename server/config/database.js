@@ -1,7 +1,12 @@
 import pg from 'pg';
+import dotenv from 'dotenv';
+import path from 'path';
 
-// Check if environment is production
-const isProduction = process.env.NODE_ENV === 'production';
+// Explicitly configure dotenv to use the .env file in the /server directory
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(path.dirname(__filename)); // Go up one level from /config
+dotenv.config({ path: path.join(__dirname, '.env') });
 
 const config = {
     user: process.env.PGUSER,
@@ -9,7 +14,9 @@ const config = {
     host: process.env.PGHOST,
     port: process.env.PGPORT,
     database: process.env.PGDATABASE,
-    ssl: isProduction ? { rejectUnauthorized: false } : false,
+    ssl: { 
+      rejectUnauthorized: false 
+    }
 };
 
 export const pool = new pg.Pool(config);

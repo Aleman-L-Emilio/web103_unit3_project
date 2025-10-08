@@ -1,5 +1,4 @@
 import { pool } from './database.js';
-import 'dotenv/config';
 
 const createLocationsTable = async () => {
   const createTableQuery = `
