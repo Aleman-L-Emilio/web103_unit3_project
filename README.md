@@ -38,6 +38,7 @@ The following **additional** features are implemented:
 Here's a walkthrough of implemented required features:
 
 <img src='https://i.imgur.com/a/QWvUxS3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+Link to GIF: https://i.imgur.com/a/QWvUxS3.gif
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ScreenToGif: https://www.screentogif.com/
