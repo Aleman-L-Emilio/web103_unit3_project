@@ -44,10 +44,10 @@ const seedData = async () => {
         // Seed Locations with NEW image URLs
         await pool.query(`
         INSERT INTO locations (name, description, image_url) VALUES
-        ('Cosmic Cantina', 'A retro-futuristic diner known for its alien clientele and synth-wave music nights.', '/assets/cosmic_cantina.jpeg'),
-        ('The Forbidden Library', 'An ancient repository of forgotten lore and powerful artifacts. Enter at your own risk.', '/assets/forbidden_library.jpeg'),
-        ('Dragon''s Peak', 'The highest mountain in the realm, home to ancient dragons and breathtaking views.', '/assets/dragons_peak.jpeg'),
-        ('Neon Alley', 'A bustling cyberpunk market street, famous for its tech vendors and noodle stalls.', '/assets/neon_alley.jpeg');
+        ('Cosmic Cantina', 'A retro-futuristic diner known for its alien clientele and synth-wave music nights.', '/assets/cosmic_cantina.png'),
+        ('The Forbidden Library', 'An ancient repository of forgotten lore and powerful artifacts. Enter at your own risk.', '/assets/forbidden_library.png'),
+        ('Dragon''s Peak', 'The highest mountain in the realm, home to ancient dragons and breathtaking views.', '/assets/dragons_peak.png'),
+        ('Neon Alley', 'A bustling cyberpunk market street, famous for its tech vendors and noodle stalls.', '/assets/neon_alley.png');
         `);
 
         // Seed Events
